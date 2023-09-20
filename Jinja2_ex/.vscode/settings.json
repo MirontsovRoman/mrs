@@ -1,0 +1,9 @@
+{
+    "workbench.colorTheme": "Winter is Coming (Light - No Italics)",
+    "editor.minimap.enabled": false,
+    "editor.fontFamily": "'Ubintu Mono'",
+    "editor.fontSize": 14,
+    "terminal.integrated.fontSize": 14,
+    "workbench.startupEditor": "none""python.defaultInterpreterPath": "/home/user/.local/share/virtualenvs/Jinja2_ex--TRo7uIi/bin/python""editor.mouseWheelZoom": true,
+    "editor.formatOnSave": true
+}
