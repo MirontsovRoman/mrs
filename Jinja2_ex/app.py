@@ -1,6 +1,20 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, abort
+from flask import Flask, request, jsonify, abort
+from pathlib import Path
+from flask_sqlalchemy import SQAlchemy
+from flask_migrate import Migrate
 
+BASE_DIR = Path(__file__).parent
 app = Flask(__name__)
+
+
+app.config['JSON_AS_ASCII'] = False
+app.config['SQLALCHEMY_DATABASE_URI'] = f"sqlite:///{BASE_DIR / 'flask2.db'}"
+app.config['SQLALCHEMY_TRACK_MODOFICATIONS'] = False
+
+db = SQAlchemy(app)
+migrate = Migrate(app, db)
+
 
 @app.get('/')
 def home():
